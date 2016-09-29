@@ -2,12 +2,12 @@
 
     // DEFINE A URL
     define('PATH', dirname(__FILE__));
-    define('HOME', 'http://localhost/Sistema_Chamados/');
+    define('HOME', 'http://192.168.0.100/mvc_php/');
 
     // CONFIG OF THE SITE
     define('HOST', 'localhost');
     define('USER', 'root');
-    define('PASS', '');
+    define('PASS', '1212716');
     define('DBSA', 'mysistem');
 
     // ERROR MESSAGES

@@ -1,0 +1,73 @@
+.login{
+    display: block;
+    border-radius: 5px;
+    position: absolute;
+    width: 350px;
+    min-height:270px;
+    left: 50%;
+    top: 50%;
+    margin: -135px -175px;
+    clear: both;
+    background: rgba(0 , 0, 0, .0);
+    padding: 1%;
+    font-family: monospace;
+}
+
+.login figure{
+    display: flex;
+    justify-content: center;
+
+}
+.login > figure > img{
+    width: 50px;
+    height: 50px;
+}
+
+.login > form > label{
+    display: none;
+    color: white;
+    position: fixed;
+    margin:-20px 0 0 30px;
+}
+
+
+.login > form > input[type="text"], input[type="email"], input[type="password"]{
+    display: block;
+    position: relative;
+    font-size: 1.3em;
+    background-color: transparent;
+    color: #fff;
+    width: 85%;
+    border: none;
+    border-bottom: 2px solid rgba(255 , 255, 255, .3);
+    padding: 7px 7px 7px 40px;
+    margin: 25px auto;
+    opacity: .8;
+}
+.login > form > input[type="text"]:focus ,input[type="email"]:focus, input[type="password"]:focus{
+    opacity: 1;
+    transition: .2s;
+}
+::-webkit-input-placeholder {
+   color: rgba(255 , 255, 255, .8);
+}
+:-moz-placeholder{
+    color: rgba(255 , 255, 255, .8);
+}
+.login > form > input[type="submit"]{
+    display: block;
+    width: 30%;
+    position: relative;
+    margin: auto;
+}
+
+/* NOTIFICACOES DO LOGIN */
+
+.notify{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 30%;
+    top: 3%;
+    left: 65%;
+}
