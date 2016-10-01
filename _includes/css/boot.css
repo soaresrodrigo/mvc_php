@@ -40,6 +40,15 @@ a img{border: 0;}
 .trigger.alert{color: #f39c12; border-color: #f39c12;}
 .trigger.error{color: #c0392b; border-color: #c0392b;}
 
+.notify{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 30%;
+    top: 3%;
+    left: 65%;
+}
+
 /*------------------------------ PALETA DOS BACKGROUNDS -----------------------------------------------------*/
 
 /* BACKGROUNS GRADIENTES*/
@@ -73,6 +82,7 @@ a img{border: 0;}
 
 /*-------------------------- CONTEINERS ------------------------------*/
 .container{ float: left; width: 100%;}
+.window{float: left; width: 100%; min-height: 100vh; max-height: 100%;}
 .content{ width: 80%; margin: 0 10%; padding: 40px 0;}
 
 /*CONFIGURAÇÕES DOS HEADERS*/

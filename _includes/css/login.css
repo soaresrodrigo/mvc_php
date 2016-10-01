@@ -63,11 +63,3 @@
 
 /* NOTIFICACOES DO LOGIN */
 
-.notify{
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: 30%;
-    top: 3%;
-    left: 65%;
-}

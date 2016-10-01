@@ -1,5 +1,4 @@
 <?php
-
     if(!defined('PATH')){die;}
     session_start();
 

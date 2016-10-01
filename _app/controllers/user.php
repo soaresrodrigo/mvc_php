@@ -9,10 +9,10 @@
             parent::__construct(1);
         }
 
-        public function index(){            
+        public function index(){                       
             $this->title = "Principal";
             $this->content = 'user/home';
-            require_once PATH . '/_user/includes/masterUser.php';            
+            require_once PATH . '/_user/includes/masterUser.php';      
         }#endFunction
 
     }
