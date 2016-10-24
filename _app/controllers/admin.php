@@ -6,7 +6,7 @@
     class Admin extends mvc\Controller{
 
         function __construct(){
-            parent::__construct(3);
+            $this->login = new models\Login(3);
         }
 
         public function index(){            

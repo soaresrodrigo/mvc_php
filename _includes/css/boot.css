@@ -7,10 +7,14 @@
     outline: 0; /*Frescura da borda*/
     font-size: 1em;
     font-weight: 400;
+    text-align: justify;
     line-height: 1.2; /*Espaçamento das palavras*/
     letter-spacing: 0em; /*Espaçamento de cada letra*/
     box-sizing: border-box; /*Alinhar a borda do padding*/
     font-family: 'SFNS Display', sans-serif;
+}
+b{
+  font-weight: bold;
 }
 
 /*HIERARQUIAS DOS Hs*/
@@ -26,27 +30,58 @@ a img{border: 0;}
 /**************************************
 /************ CSS TRIGGER *************
 **************************************/
-.trigger{
-   padding: 15px;
-   color: #fff;
-   background: #eeeef2;
-   border-left: 4px solid transparent;
-   box-shadow: 0px 3px 3px 0px rgba(0,0,0,.3);
-   margin-bottom: 10px;
-   }
+.trigger {
+  padding: 15px;
+  color: #444;
+  text-align: center;
+  background-color: rgba(230, 234, 245, .8);
+  border-left: 4px solid transparent;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .3);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-origin: content-box;  
+  cursor: default;
+}
 
-.trigger.accept{color: #27ae60; border-color: #27ae60;}
-.trigger.infor{color: #1B95E0; border-color: #1B95E0;}
-.trigger.alert{color: #f39c12; border-color: #f39c12;}
-.trigger.error{color: #c0392b; border-color: #c0392b;}
+.trigger.accept {
+  background-image: url('../icon/success.png');
+  border-color: #45ADA8;
+}
+
+.trigger.load {
+  background-image: url('../icon/load.gif');
+  border-color: #2c3e50;
+}
+
+.trigger.infor {
+  background-image: url('../icon/info.png');
+  border-color: #1B95E0;
+}
+
+.trigger.alert {  
+  background-image: url('../icon/warning.png');
+  border-color: #dfbe3c;
+}
+
+.trigger.error {
+  background-image: url('../icon/error.png');
+  border-color: #c0392b;
+}
 
 .notify{
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 30%;
-    top: 3%;
-    left: 65%;
+    top: 10%;
+    right: -30%;
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+.notify:active{
+  transition: all .3s;
+  transform: scale(1.2,1.2);
 }
 
 /*------------------------------ PALETA DOS BACKGROUNDS -----------------------------------------------------*/
@@ -75,7 +110,7 @@ a img{border: 0;}
 .bg-apple{background-color:#f2f2f2;color:#878787;}
 
 /*BACKGROUNDS DE IMAGENS*/
-.bg-imagem{background-image: url(../img/imagem.jpg); background-size: cover; background-repeat: no-repeat;}
+.bg-imagem{background-image: url(../img/imagem.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;}
 
 /*--------------------- PALETA DE FONTES -------------------------*/
 .fontezero{font-size: 0em !important;}
@@ -155,7 +190,6 @@ a img{border: 0;}
 }
 
 /*------------------------------------------------- HELPERS ----------------------------------------------------*/
-.desfoque{backdrop-filter:blur(5px);}
 .textshadow{text-shadow: 1px 1px 0 #ccc;}
 .boxshadow{ box-shadow: 0px 3px 3px 0px rgba(0,0,0,.3);}
 .radius{border-radius: .5em;}
@@ -181,6 +215,7 @@ a img{border: 0;}
 
 /*Display*/
 .ds-block{display: block;}
+.ds-flex{display: flex !important;}
 .ds-inblock{display: inline-block;}
 .ds-inline{display: inline;}
 .ds-none{display: none;}
@@ -228,7 +263,15 @@ a img{border: 0;}
 .botao-roxo{background-color: #8e44ad; border-color: #9b59b6;}
 
 /*IC0NES*/
-.icon{padding-left: 30px; background-position: center left; background-repeat: no-repeat; background-size: auto 100%;}
+.icon {
+  padding-left: 30px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
 
 .icon-mail{background-image: url(../icon/id-card-3.png)}
 .icon-pass{background-image: url(../icon/unlocked-1.png)}
+.icon-erro{background-image: url(../icon/error.png)}
+.icon-logoff{background-image: url(../icon/login.png)}
+.icon-setting{background-image: url(../icon/settings-4.png)}

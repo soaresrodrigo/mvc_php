@@ -1,44 +1,103 @@
 .menu_principal {
     display: flex;
     position: relative;
+    z-index: 2;
+    height: 36px;
     width: 100%;
-    min-height: 50px;
-    background-color: #eeeef2;
-    border-top: 3px #666 solid;
-    box-shadow: 5px 1px 20px rgba(0,0,0,.3);
+    background-color: rgba(230, 234, 245, .9);
+    border-top: 3px #34495e solid;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.3);
 }
 .menu_principal > .menu_logo{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 5%;
+    margin: auto;
+    height: 100%;
 }
 .menu_principal > .menu_logo > img{
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: 90%;
 }
 
 .menu_principal > .menu_links {
     display: flex;
-    width: 100%;
+    justify-content: flex-end;
+    width: 90%;
 }
 
 .menu_principal > .menu_links > ul {
     display: flex;
-    width: 100%;
-    margin-right: 10%;
-    justify-content: flex-end;
     align-items: center;
 }
 
 .menu_principal > .menu_links > ul > li>  a{
     display: block; 
-    padding: 20px 15px;
+    padding: 7px 15px;
     color: #444;
-    background-image: linear-gradient(transparent 50%, transparent, #666 50%, #666);
+    background-image: linear-gradient(transparent 50%, transparent, #34495e 50%, #34495e);
     background-size: 100% 200%;
-    transition: background-position .3s;
+    transition: background-position .1s;
 }
 .menu_principal > .menu_links > ul > li>  a:hover{
     color: white;
     transition: .3s all;
     background-position: 0 -100%;
+}
+
+.menu_principal  .menu_login{
+    display: flex;
+    width: 5%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.menu_principal  .menu_login img{
+    width: 30px;
+    height: 90%;
+    border-radius: 5em;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------- Painel do usuário ---------------------------------------------- */
+.lateral {
+    transform: translateX(-300px);
+    overflow: hidden;
+}
+
+.painel_user {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: -300px;
+    background-color: #444;
+    width: 300px;
+    color: white;
+    padding-top: 3px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,.5);
+    border-bottom: 1px solid #000;
+    min-height: 100vh;
+}
+
+.painel_user figure{
+    display: block;
+    background-color: rgba(0,0,0,.1);
+    margin: 0 auto;
+    width: 100%;
+    padding: 1%;
+}
+
+.painel_user figure img{
+    position: relative;
+    border-radius: 10em;
+    margin: auto 25%;
+    width: 50%;
+    height: auto;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+.painel_user figcaption{
+    text-align: center;
+    font-size: 1.1em;   
 }

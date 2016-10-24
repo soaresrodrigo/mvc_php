@@ -6,7 +6,7 @@
     class User extends mvc\Controller{
 
         function __construct(){
-            parent::__construct(1);
+            $this->login = new models\Login(1);
         }
 
         public function index(){                       

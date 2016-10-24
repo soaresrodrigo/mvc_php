@@ -1,11 +1,12 @@
 <?php
     namespace controllers;
     use core\mvc as mvc;
+    use models;
 
     class Login extends mvc\Controller{
 
         function __construct(){
-            parent::__construct(0);
+            $this->login = new models\Login(0);
         }
 
         public function index(){        

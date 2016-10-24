@@ -1,7 +1,7 @@
 .login{
     display: block;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     width: 350px;
     min-height:270px;
     left: 50%;
@@ -33,6 +33,7 @@
 
 .login > form > input[type="text"], input[type="email"], input[type="password"]{
     display: block;
+    text-align: center;
     position: relative;
     font-size: 1.3em;
     background-color: transparent;
@@ -40,7 +41,7 @@
     width: 85%;
     border: none;
     border-bottom: 2px solid rgba(255 , 255, 255, .3);
-    padding: 7px 7px 7px 40px;
+    padding: 7px;
     margin: 25px auto;
     opacity: .8;
 }
@@ -50,12 +51,15 @@
 }
 ::-webkit-input-placeholder {
    color: rgba(255 , 255, 255, .8);
+   text-align: center;
 }
 :-moz-placeholder{
     color: rgba(255 , 255, 255, .8);
+    text-align: center;
 }
 .login > form > input[type="submit"]{
     display: block;
+    text-align: center;
     width: 30%;
     position: relative;
     margin: auto;

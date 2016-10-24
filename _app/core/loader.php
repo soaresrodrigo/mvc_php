@@ -26,24 +26,19 @@
         //PHPErro :: personaliza o gatilho do PHP
 function PHPErro($ErrNo, $ErrMsg, $ErrFile, $ErrLine) {
     $CssClass = ($ErrNo == E_USER_NOTICE ? MS_INFOR : ($ErrNo == E_USER_WARNING ? MS_ALERT : ($ErrNo == E_USER_ERROR ? MS_ERROR : $ErrNo)));
-    echo "<p class=\"trigger {$CssClass}\">";
+    echo "<p class=\"trigger{$CssClass}\">";
     echo "<b>Erro na Linha: #{$ErrLine} ::</b> {$ErrMsg}<br>";
-    echo "<small>{$ErrFile}</small>";
-    echo "<span class=\"ajax_close\"></span></p>";
+    echo "<small>{$ErrFile}</small></p>";
 
-    if ($ErrNo == E_USER_ERROR):
-        die;
-    endif;
+    if ($ErrNo == E_USER_ERROR){die;}
 }
 
 //WSErro :: Exibe erros lançados :: Front
 function MSErro($ErrMsg, $ErrNo, $ErrDie = null) {
     $CssClass = ($ErrNo == E_USER_NOTICE ? MS_INFOR : ($ErrNo == E_USER_WARNING ? MS_ALERT : ($ErrNo == E_USER_ERROR ? MS_ERROR : $ErrNo)));
-    echo "<p class=\"trigger {$CssClass}\">{$ErrMsg}<span class=\"ajax_close\"></span></p>";
+    echo "<p class=\"trigger {$CssClass}\">{$ErrMsg}</p>";
 
-    if ($ErrDie):
-        die;
-    endif;
+    if ($ErrDie){die;}
 }
 // Altera os erros padroes do php
 set_error_handler('PHPErro');

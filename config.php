@@ -15,6 +15,7 @@
     define('MS_INFOR', 'infor');
     define('MS_ALERT', 'alert');
     define('MS_ERROR', 'error');
+    define('MS_LOAD', 'load');
 
     // DEBUG ERROS
     define('DEBUG', true);

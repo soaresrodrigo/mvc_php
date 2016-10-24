@@ -30,8 +30,7 @@
 
         public function checkLogin(){
             $this->levelUser();
-            if(empty($_SESSION['userLogin']) || $_SESSION['userLogin']['user_level'] != $this->level){
-                unset($_SESSION['userLogin']);
+            if(empty($_SESSION['userLogin']) || $_SESSION['userLogin']['user_level'] != $this->level){      
                 return false;
             }else{
                 return true;
@@ -41,7 +40,7 @@
         public function redirectUser(){
             switch($_SESSION['userLogin']['user_level']){
                 case 1:
-                     header("Location: " . HOME . "user");
+                     header( "Location: " . HOME . "user");
                      break;
                 case 2:
                     header("Location: " . HOME . "gerente");
@@ -50,19 +49,16 @@
                     header("Location: " . HOME . "admin");
                     break;                    
             }
-        }
+        }#endFunction
 
         // PRIVATE METHODS
         private function setLogin(){
            if(!$this->email || !$this->pass){
-               $this->error = ['Informe seu E-mail e senha para efetuar o login', MS_ALERT];
+               $this->error = ['Preencha os dados para efetuar o login', MS_ALERT];
                $this->result = false;
            }elseif(!$this->getUser()){
                $this->error = ['Os dados informados não são compatíveis', MS_INFOR];
                 $this->result = false;
-           }elseif($this->result['user_level'] != $this->level && $this->level != 0){
-               $this->error = ["Desculpe {$this->result['user_name']}, mas você não tem permissão para acessar está área!", MS_ERROR]; 
-               $this->result = false;
            }else{
                if($this->level == 0){
                    $this->level = $this->result['user_level'];
@@ -87,7 +83,6 @@
                 session_start();
             }
             $_SESSION['userLogin'] = $this->result;
-            $this->error = ["Olá {$this->result['user_name']}, seja bem vindo(a). Aguarde redirecionamento", MS_ACCEPT];
             $this->result = true;
         }
 
