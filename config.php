@@ -6,8 +6,8 @@
 
     // CONFIG OF THE SITE
     define('HOST', 'localhost');
-    define('USER', 'root');
-    define('PASS', '1212716');
+    define('USER', '');
+    define('PASS', '');
     define('DBSA', 'mysistem');
 
     // ERROR MESSAGES
